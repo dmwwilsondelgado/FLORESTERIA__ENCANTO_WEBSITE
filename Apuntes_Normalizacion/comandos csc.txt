@@ -1,0 +1,268 @@
+
+font-size: cambia tamaño de la letra            Unidades: pt, px, mm ,cm ,em,
+reponsive-design: ajuste de pagina(concepto no visto)
+(deskpot firts)
+___________________________________________________________________
+
+rem(concepto no vistio)
+
+.contact-form{
+    font-size: 25px;//tamaño de letra
+    font-family://tipografia// tipo de letra como=georgia;
+    line-height: 2;//______________________________________________{El line heiht nace del centro de la letra =  1 line =  1/2 del centro donde proviene la letra exacta   
+    font-weight: normal;//___________________________________________{Es el umento del grosor de la letra(100,200.....900;1000;)                                           line = 1/2 del tamaño de la letra hacia arriba +  1/2 hacia abajo}
+    font-stretch: normal;//__________________________________________{selecciona una cara normal, condensada o expandida de una fuente}
+    background-color: blue;//_____________________________________{es el entorno donde va la caja  identificandola con un color(azul,verde,rojo,)}
+    width: 50vw; //ocupa toda la pantalla entera de larguo      
+    height: 50vh;//ocupa toda la panttalla entera de ancho
+}
+
+
+para exportar una tipografia se van para el navegador buscan (gogle fonts)
+eligen su tipo de letra en el butoon(+)
+copian el link
+vamos al HTML
+Lo insertamos en el head 
+<head>
+      A mi NO me sirvio xd
+</head>
+
+
+pa comentar y no valerlo sinos[/*]
+
+
+para ajustar ajustes del navegador 
+bucamos en (Normalize.csc)
+descargamos el archivo y le damos a guardar
+en el <head>
+           <link rel="stylesheet"  type="text/css" href="Normlize.css"// y listo
+
+o usamos el Simbolo De Sistema 
+       compiamos el link  del inicio o lo insertamos en nuestro sistema
+       link:install normalize.css
+
+
+
+PROPIEDADES DEL TEXTO (tamaño     ; tipo de letra   ; grosor letra; )
+                      ( font-style,text-decorarition,   list-style ;)
+
+PROPIEDADES DE CAJA (tamaño,background-color,image,)
+                     (border,border-radius,padding,margin,box-shadow)
+
+----------------las cajas estan definidas en Bloque o en linea
+ Que es caja Bloque=
+la parte que ocupa un divisor o letra       (______________________________________)
+ocupando toda la pantalla del naveguador    (                                      )
+
+ Que es caja en Linea=
+Solo el pedazo donde esta lo escrito        (--------------------                  ) 
+o la imagen sola que ocupa en el navegador  (                                      )
+hasta cierto espacio                        (                                      )
+
+
+
+PROPIEDA SEPARACION DE DISTANCIAS DE CAJAS a SU RESPECTIVA LETRA
+
+h2 {
+    padding-bottom:20px;//valor de distancia   abajo
+    padding-top:20px;//valor de distancia      arriba
+    padding-letf:20px;//valor de distancia     izquierda
+    padding-right:20px;//valor de distancia    derecha
+    
+
+    para dar valores a todos los lados de la caja solo
+    escribimos 
+    padding: y su valor;  // sera exacto por lados iguales
+    con un solor valor.
+
+
+    h2{
+      padding: 20px 30px 40px 50px;
+    }
+    //ejemplo con bastantes valores  primero memorizar que va el 
+    1px  ARRIBA     Top
+    2px  DERECHA    rigth
+    3px  ABAJO      bottom
+    4px  IZQUIERDA  left
+    //y esos seria cada valor en orden en el padding
+    padding: 20px 30px 40px 50px;
+
+
+
+ALTO Y ABAJO
+     h2{
+       height:100px;//altura:100px;
+       whidth:100px;//altura:100px;
+
+
+HERAMIENTA BORDES
+      
+      h2{
+        bordes-radius: 10 em,px,//todos los identificadores
+        border-solid: 10,px     // color Del margen 
+        }
+
+HERRAMIENTO BOX
+    
+      h2{
+        box-shadow:valor;// sombra-caja:valor;
+        text-shadow:valor// texto.caja:valor;
+        }
+
+[DATO:los valores insertados los puedes repetir para aumentar el tamaño visual]
+
+
+HERRAMIENTO ROTACION
+
+       h2{
+          trasform:rotate:(valor asignado,deg)//siempre deg[grados]
+
+
+
+0)Outline
+
+1)position:// Es un elemento pocicionado que afectara el flujo en html
+           STATIC
+        
+           RELATIVE
+
+           ABSOLUTE
+          
+           FIXED
+           
+           STICKY
+
+2) Z-INDEX
+
+
+        SOLO EN ELEMENTOS POCISIONADOS/// explico los elementos que sobrepasan  la vista  de otros elementos  en su eje (Z)
+        CONFLICTOS DE HIJOS Y PADRES
+
+3) DISPLAY:
+
+           BLOCK
+           INLINE
+ 
+
+           INLINE-BLOCK
+           TABLE
+           INLINE-ITEM
+           TABLE-CELL
+           TABLE-ROW
+           TABLE-COLUMN
+
+           GRID
+           FLEX
+
+           INLINE-FLEX
+           INLINE-GIRD
+
+
+4) OVERFLOW (X,Y,Z) AUTO;HIDDEN,SCROLL  //LO QUE SOBRA OVERFLOW
+
+5)FLOAT: (left,right,none,Inherit)
+
+
+6)PSEUDO-ELEMENTOS   //Que son es un Elemento que no es un elemento// EJEMPLO LETRAS PODEMOS DETACARLAS DE COLORES ECT 
+  ::first-line    │ BLOCK//la primera linea del parrafo
+  ::first-letter  │ BlOCK//la primera letra del parrafo
+  ::placeholder   │ solo la acion en un primer acto___________ejemplo (form{
+                                                                            margin: 100px auto;
+                                                                            display:block;
+                                                                            backgroun-color: #555;
+                                                                            withd: 520px:
+                                                                      }
+                                                                      input{
+                                                                            padding:6px;
+                                                                            width:100px
+                                                                      }
+                                                                      input::(placerholder){
+                                                                            color: red;
+                                                                            font-size: 1.4em;
+                                                                            background-color: yellow;
+
+
+
+  ::after         │ HIJOS-CONTENT(NECESARIO)-INLINE ___________________ejemplo cuando en html el a es un escrito "me suscribi"tambien lo es pero no se puede selecionar 
+                                                                        a::before{                                en el cursor porque es una pseudoelemto:un elemto que no exite 
+                                                                                 content:"me sucribi";
+                                                                                 color: #fff
+  ::before        │ HIJOS-CONTENT(NECESARIO)-INLINE 
+  ::selection     │ //La manera de selecionar un elemento
+
+7)PESEUDO-CLASES// ESCUCHAR ELEMENTO
+
+
+
+      :hover      │
+      :link       │
+      :visited    │
+      :active     │
+      :focus      │enfoca cuando oprimos coplementandolo con una trasition
+      :lang       │lang la manera de destacar un elemento (ejemplo ingles español)
+
+
+
+8)Object-Fit:Fil// se destaca en imagenes este comando
+        
+        object-fit:cover,none,scale-down;// la imagen se ajusta ala propiedad de la caja
+        contain
+        cover
+        none
+        Scale-Down
+
+   Object-position:
+                  left(izquierda),right(derecha).Top(arriba),button(abajo),
+                  PX - EM -% - ETC
+
+
+
+Parametros
+Configurar la etiqueta Viewport
+Cuando  el navegador renderiza un documento web, hace un escalado de los contenidos para que las páginas que están diseñadas para escritorio se vean de forma aceptable en un dispositivo móvil. En la mayoría de los casos, tendremos que hacer zoom para poder leerlos. Sin embargo, podemos configurar el viewport para indicar qué debe hacer.
+
+Para ello, disponemos de los siguientes parámetros en la etiqueta META:
+
+Width: anchura virtual (emulada) de la pantalla o anchura del viewport.
+Height: altura virtual de la pantalla o anchura del viewport.
+Initial-scale: la escala inicial del documento.
+Minimum-scale: la escala mínima que se puede poner en el documento.
+Maximum-scale: la escala máxima configurable en el documento.
+User-scalable: si se permite o no al usuario hacer zoom.
+
+parametro
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+parametro para iconos
+<script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
