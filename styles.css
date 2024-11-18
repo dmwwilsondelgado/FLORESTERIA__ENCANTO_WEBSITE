@@ -1,9 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+
+.container-titulo__header{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: small;
+}
+
+
 /* Resetear algunos estilos predeterminados del navegador */
 body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
 }
-
+body{
+    background: radial-gradient(circle, rgba(179,236,255,1) 0%, rgba(254,249,255,1) 81%, rgba(253,197,255,1) 100%);
+}
 /* Estilos para el encabezado */
 header {
     background-color: #333;
