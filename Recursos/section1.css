@@ -25,6 +25,7 @@ header h1 {
     text-decoration: none;
     text-transform: uppercase;
     font-style: normal;
+    font-weight: bold;
 }
 .header__title{
     font-size: 5.7rem;
@@ -32,9 +33,15 @@ header h1 {
 }
 .header__button{
     margin-top:40px ;
-    padding-left: 25px;
-    padding-right: 25px;
-    background-color: var(--color__blanco-palido)
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background:#fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
 }
 .header__button:hover{
     background-color: #e7e7e7;
