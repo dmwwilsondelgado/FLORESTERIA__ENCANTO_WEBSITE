@@ -2,6 +2,7 @@
 @import url(Recursos/variables.css);
 @import url(Recursos/section1.css);
 @import url(Recursos/section2.css);
+@import url(Recursos/section3.css);
 .dancing-script {
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
