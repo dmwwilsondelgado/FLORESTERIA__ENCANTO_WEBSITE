@@ -22,7 +22,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: radial-gradient(circle, rgba(179,236,255,1) 0%, rgba(254,249,255,1) 81%, rgba(253,197,255,1) 100%);
+    background-color: var(--color__blanco-palido);
     height: 100vh;
 }
 

@@ -1,38 +1,36 @@
 header{
-    background-color: #33333331;
     color: #fff;
     padding: 20px;
     text-align: center;
     position: relative;
     height: 98.1vh;
 }
-
+.section__header{
+    background-image: url(../Recursos-img/Flores-ventas.JPG);
+}
 header h1 {
     font-size: 36px;
 }
 
-nav ul {
+.header__nav-list {
     list-style-type: none;
 }
 
-nav ul li {
+.header__nav-item{
     display: inline;
     margin-right: 20px;
 }
-
-nav a {
+.header__nav-link {
     color: #fff;
     text-decoration: none;
+    text-transform: uppercase;
+    font-style: normal;
 }
-.header__logo{
-    margin: 0;
-    padding: 0;
+.header__title{
+    font-size: 5.7rem;
+    text-transform: uppercase;
 }
-.header__logo-img{
-    z-index: -1;
-    position: relative;
-}
-
-.section1__header{
-    background-image: url(../Recursos-img/Flores-ventas.JPG);
+.header__button{
+    padding-left: 10px;
+    padding-right: 10px;
 }
