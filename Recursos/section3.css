@@ -1,23 +1,17 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
-}
-
 .section-article {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     padding: 20px;
     align-items: center;
+    height: 100vh;
 }
 
 .section-article__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 30px;
 }
 
 .section-article__title {
@@ -27,12 +21,13 @@ body {
 
 .section-article__description {
     font-size: 1rem;
+    font-weight:bold;
 }
 
 .section-article__images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    gap: 30px;
 }
 
 .section-article__image-container {
@@ -42,11 +37,12 @@ body {
 .section-article__image {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
 .section-article__caption {
     font-size: 1rem;
     margin-top: 5px;
     font-weight: bold;
+    color: black;
 }
