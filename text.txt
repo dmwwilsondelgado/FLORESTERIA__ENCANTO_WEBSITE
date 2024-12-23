@@ -58,4 +58,7 @@ resposive página
                 <img src="imge.jpg">
             </div>
         </div>
+        <footer>
+            <p>&copy; 2023 Sistema de Educación</p>
+        </footer>
     </div>
