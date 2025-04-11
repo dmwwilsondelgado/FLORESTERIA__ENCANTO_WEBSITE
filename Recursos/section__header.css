@@ -7,6 +7,9 @@ header{
 }
 .section__header{
     background-image: url(../Recursos-img/Flores-ventas.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 header h1 {
     font-size: 36px;
