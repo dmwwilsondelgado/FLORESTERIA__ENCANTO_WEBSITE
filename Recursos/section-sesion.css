@@ -31,6 +31,10 @@
     color: rgb(255, 255, 255);
     margin-left: 25px;
 }
+.section-inicio__button--color__blanco{
+    color: aliceblue;
+    text-decoration: none;
+}
 .section-inicio__subtitle{
     text-align: start;
     text-transform: uppercase;
