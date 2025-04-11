@@ -1,4 +1,4 @@
-.section-sesion--registre{
+.section-sesion{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
