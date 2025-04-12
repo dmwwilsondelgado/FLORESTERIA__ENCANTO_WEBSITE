@@ -18,6 +18,11 @@
   "homepage": "https://github.com/dmwwilsondelgado/FLORESTERIA__ENCANTO_WEBSITE#readme",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
