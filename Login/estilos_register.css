@@ -1,103 +1,108 @@
 /* Estilos generales */
 
 :root {
-    --primary-color: #3719dd;
-    --white-color: #fff;
-    --grey-color: #cbcbcb;
-    --dark-grey-color: #4f4b4b;
+  --primary-color: #3719dd;
+  --white-color: #fff;
+  --grey-color: #cbcbcb;
+  --dark-grey-color: #4f4b4b;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    background-color: var(--grey-color);
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: "Arial", sans-serif;
+  display: flex;
+  background-color: var(--grey-color);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
 }
 
 .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--white-color);
-    padding: 10px; /* Ajustamos el padding */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    max-width: 400px; 
-    height: auto; 
-    min-height: 400px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white-color);
+  padding: 10px; /* Ajustamos el padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  height: auto;
+  min-height: 400px;
 }
-
+.contenedor:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
 .titulo {
-    color: var(--dark-grey-color);
-    margin-bottom: 25px; 
+  color: var(--dark-grey-color);
+  margin-bottom: 25px;
 }
 
 .texto-separado {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
-
 .formulario__input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid var(--grey-color);
-    border-radius: 5px;
-    outline: none;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid var(--grey-color);
+  border-radius: 5px;
+  outline: none;
+}
+.formulario__input:focus{
+  box-shadow: 0 0 5px var(--primary-color);
 }
 
 .formulario__botones {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .formulario__boton {
-    background-color: var(--white-color);
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s, color 0.2s;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .formulario__boton:hover {
-    background-color: var(--primary-color);
-    color: var(--white-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 
 .formulario__enlace {
-    color: var(--dark-grey-color);
-    text-decoration: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: normal; 
-    transition: color 0.2s;
+  color: var(--dark-grey-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: normal;
+  transition: color 0.2s;
 }
 
 .formulario__enlace:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .ya-tengo-usuario {
-    color: var(--dark-grey-color);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  color: var(--dark-grey-color);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .ya-tengo-usuario:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
