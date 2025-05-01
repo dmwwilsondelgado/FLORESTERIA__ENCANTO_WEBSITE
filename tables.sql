@@ -1,6 +1,7 @@
 use floresteria_encanto;
+
 create table usuarios(
-  id_usuario INT AUTO_INCREMENT PRIMARY KEY,-- ID de la categoría (clave primaria)
+  id INT AUTO_INCREMENT PRIMARY KEY,-- ID de la categoría (clave primaria)
   nombre_usuario VARCHAR(255) NOT NULL,
   apellido_usuario VARCHAR(50),
   correo VARCHAR(255) UNIQUE NOT NULL,
@@ -11,60 +12,59 @@ create table usuarios(
 );
 
 create table categoria_articulos(
-  id_categoria_producto int primary key,
+  id int primary key,
   nombre_categoria varchar(30)
 );
 
 create table productos(
-  id_producto int auto_increment primary key,
+  id int auto_increment primary key,
   nombre_producto varchar(255) not null,
   descripcion text,
   precio decimal(10,2) not null,
   stock int not null,
-  foreign key (categoria_producto) references categoria_articulos(id_categoria_producto)
+  foreign key (producto_categoria) references categoria_articulos(id)
 );
 
 create table imagenes(
-  id_imagen int auto_increment primary key,
+  id int auto_increment primary key,
   url varchar(255),
-  foreign key (id_producto) references productos(id_producto)
+  foreign key (producto_id) references productos(id)
 );
 
 create table carrito(
-  id_carrito int auto_increment primary key,
+  id int auto_increment primary key,
   cantidad int not null,
   subtotal decimal(10,2) not null,
   fecha_creacion timestamp default current_timestamp,
-  foreign key (id_producto) references productos(id_producto)
+  foreign key (producto_id) references productos(id)
 );
 
 create table detalle_carrito(
-  id_detalle_carrito int auto_increment primary key,
+  id int auto_increment primary key,
   cantidad int,
   subtotal decimal(10,2),
-  foreign key (id_carrito) references carrito(id_carrito),
-  foreign key (id_producto) references productos(id_producto)
+  foreign key (carrito_id) references carrito(id),
+  foreign key (producto_id) references productos(id)
 );
 
 create table facturacion(
-  numero_factura int auto_increment primary key,
+  id int auto_increment primary key,
   fecha_de_factura_hora timestamp default current_timestamp,
   subtotal decimal(10,2),
   iva decimal(10,2),
   total decimal(10,2),
-  foreign key (fk_id_carrito) references carrito(id_carrito),
-  foreign key (fk_id_usuario) references usuarios(id_usuario)
+  foreign key (carrito_id) references carrito(id),
+  foreign key (usuario_id) references usuarios(id)
 );
 create table entrega_pedido(
-  id_entrega int auto_increment primary key,
-  fk_numero_factura int,
+  id int auto_increment primary key,
   direccion varchar(255),
   ciudad varchar(100),
   departamento varchar(100),
-  foreign key (fk_numero_factura) references facturacion(numero_factura)
+  foreign key (numero_factura) references facturacion(numero_factura)
 );
 create table comentarios_articulo(
-  id_comentario int auto_increment primary key,
+  id int auto_increment primary key,
   comentario text,
   fecha_comentario timestamp default current_timestamp,
   calificacion int, -- opcional
