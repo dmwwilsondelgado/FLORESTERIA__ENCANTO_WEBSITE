@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary-color: #3719dd;
+  --primary-color: #fa0b0b;
   --white-color: #fff;
   --grey-color: #cbcbcb;
   --dark-grey-color: #454343;
@@ -68,7 +68,7 @@ body {
   position: relative;
   margin-bottom: 40px;
   font-family: "Josefin Sans", sans-serif;
-  font-size:2rem;
+  font-size: 2rem;
 }
 .subtitle__content {
   display: flex;
@@ -86,7 +86,7 @@ body {
   display: flex;
   background-color: var(--gren_fondo);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -100,8 +100,12 @@ body {
   padding: 8px;
   margin-bottom: 15px;
   border: 1px solid var(--grey-color);
-  border-radius: 5px;
+  border-radius: 10px;
   outline: none;
+}
+.formulario__input:focus {
+  height: 50%;
+  transition: 5s;
 }
 
 .formulario__boton {
@@ -146,7 +150,7 @@ body {
 }
 
 .titulo__registro {
-  color: var(--grey-color); /* Cambiar el color a gris */
+  color: var(--white-color); /* Cambiar el color a gris */
   margin-top: 50px; /* Ajustar el margen superior para subir más el título */
   font-size: 18px;
   text-decoration: underline;
@@ -167,7 +171,7 @@ body {
 }
 
 .formulario__enlace {
-  color: var(--grey-color);
+  color: var(--white-color);
   text-decoration: none;
   margin-top: 5px;
   transition: color 0.2s;
