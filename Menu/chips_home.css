@@ -1,0 +1,43 @@
+:root {
+  --primary-color: #fa0b0b;
+  --white-color: #fff;
+  --grey-color: #cbcbcb;
+  --dark-grey-color: #454343;
+  --gren_fondo: #295f248a;
+  --black_color: #000000;
+}
+
+.floresteria__content {
+  grid-area: content;
+}
+.floresteria__chips-wrapper {
+  max-width: calc(100vw - 240px);
+  overflow-x: scroll;
+  background-color: var(--black_color);
+  display: flex;
+  padding-left: 14px;
+  border-top: 1px solid var(--grey-color);
+  border-bottom: 1px solid var(--grey-color);
+}
+.floresteria__chips {
+  margin: 12px 6px;
+  background-color: var(--dark-grey-color);
+  padding: 6px 12px;
+  color: var(--white-color);
+  cursor: pointer;
+  border-radius: 15px;
+  white-space: nowrap;
+  transition: 0.5s;
+}
+.floresteria__chips-texto {
+  font-size: 0.9rem;
+}
+.floresteria__chips:hover {
+  background-color: var(--grey-color);
+}
+.floresteria__chips-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+.floresteria__chips-wrapper:hover::-webkit-scrollbar-thumb {
+  background-color: var(--dark-grey-color);
+}
