@@ -1,16 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url(variables.css);
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url(css/variables.css);
 
 /*importaciones para orden de codigo */
-@import url(chips_home.css);
-@import url(header_home.css);
-@import url(sidebar_home.css);
-@import url(container_home.css);
+@import url(css/chips_home.css);
+@import url(css/header_home.css);
+@import url(css/sidebar_home.css);
+@import url(css/container_home.css);
 
-
-
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -20,52 +17,50 @@
 /*
 Layout
 */
-.floresteria{
+.floresteria {
   display: grid;
   grid-template-columns: 240px 1fr;
   grid-template-rows: 56px 1fr;
-  grid-template-areas: 
-  'header header'
-  'sidebar content';
+  grid-template-areas:
+    "header header"
+    "sidebar content";
   height: 100vh;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 8px;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: transparent;
   border-radius: 5px;
 }
 
-
-
 /*scroll  barra1*/
-.youtube__sidebar::-webkit-scrollbar-thumb{
+.youtube__sidebar::-webkit-scrollbar-thumb {
   background-color: var(--GRIS_OSCURO_CLARO);
 }
 
-
 /*media quuerys*/
 
-@media (max-width:1200px){
-  .youtube{
+@media (max-width: 1200px) {
+  .youtube {
     grid-template-columns: 70px 1fr;
   }
-  .youtube__sidebar-items span, .youtube__sidebar-items h4{
+  .youtube__sidebar-items span,
+  .youtube__sidebar-items h4 {
     display: none;
   }
-  .youtube__sidebar-items{
+  .youtube__sidebar-items {
     padding: 0;
   }
-  .youtube__sidebar-item{
+  .youtube__sidebar-item {
     padding: 0 20px;
   }
-  .youtube__chips-wrapper{
+  .youtube__chips-wrapper {
     max-width: calc(100vw - 70px);
   }
 }
-@media (max-width:800px){
-  .youtube__search-container{
+@media (max-width: 800px) {
+  .youtube__search-container {
     display: none;
   }
 }

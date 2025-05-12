@@ -1,7 +1,7 @@
 /* barra lateral de floresteria */
 .floresteria__sidebar {
   grid-area: sidebar;
-  background-color: var(--GRIS_SOMBRA);
+  background-color: var(--spacios);
   padding-top: 10px;
   overflow-y: scroll;
 }
@@ -18,7 +18,7 @@
   border-radius: 10px;
   transition: 0.5s;
   text-decoration: none;
-  color: var(--BLANCO_PURO);
+  color: var(--fuentes);
   font-size: 0.9rem;
 }
 .floresteria__sidebar-title {
@@ -32,7 +32,8 @@
   font-size: 1.5rem;
 }
 .floresteria__sidebar-item:hover {
-  background-color: var(--GRIS_ACERO);
+  background-color: var(--lila-rosado-oscuro);
+  color: aliceblue;
 }
 .floresteria__sidebar-linea-separador {
   margin: 12px 0;

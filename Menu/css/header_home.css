@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--NEGRO_CARBON);
+    background-color: var(--spacios);
     width: 100%;
     height: 56px;
     justify-content: space-between;
@@ -13,6 +13,7 @@
     padding-left: 16px;
     padding-right: 16px;
     gap: 6px;
+    border-bottom:0.5px solid black ; 
   }
   .floresteria__logo-container{
     display: flex;
@@ -22,7 +23,7 @@
   .floresteria__icono_menu{
     font-size: 1.5rem;
     text-decoration: none;
-    color: var(--BLANCO_PURO);
+    color: black;
   }
   .floresteria__logo{
     display: flex;
@@ -31,7 +32,7 @@
     position: relative;
   }
   .floresteria__logo-titulo{
-    color: var(--BLANCO_PURO);
+    color: var(--fuentes);
     letter-spacing: -1px;
     font-size: 1.5rem;
   }
@@ -58,11 +59,11 @@
   .floresteria__search-input{
     height: 40px;
     width: 100%;
-    background-color: var(--NEGRO_PROFUNDO);
-    color: var(--BLANCO_HUMO);
+    background-color: var(--rosado-suave);
+    color: black;
     padding: 12px;
     outline: none;
-    border: 1px solid var(--GRIS_SEMITRASPARENTE);
+    border: 1px solid black;
     border-radius: 10px 0px 0px 10px;
   }
   .floresteria__search-button,.floresteria__mic-button{
@@ -70,12 +71,13 @@
     min-width: 40px;
     height: 40px;
     font-size: 1.5rem;
-    background-color: var(--GRIS_PIZARRA);
-    color: var(--BLANCO_PURO);
+    background-color: var(--spacios);
+    color: var(--fuentes);
     outline: none;
     border-radius: 0px 10px 10px 0px;
     cursor: pointer;
     border: none;
+    border: 1px solid black;
   }
   .floresteria__mic-button{
     border-radius: 50%;
@@ -89,7 +91,7 @@
     width: 40px;
     min-width: 40px;
     height: 40px;
-    color: var(--BLANCO_PURO);
+    color: black;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -100,7 +102,7 @@
     transition: 0.8s;
   }
   .floresteria__profile-container_icons--fondo_gris_acero:hover{
-    background-color: var(--GRIS_PERLA);
+    background-color: var(--spacios);
   }
   
   .floresteria__profile-box{

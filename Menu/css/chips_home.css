@@ -4,7 +4,7 @@
 .floresteria__chips-wrapper {
   max-width: calc(100vw - 240px);
   overflow-x: scroll;
-  background-color: var(--NEGRO_SUPER_profundo);
+  background-color: var(--spacios);
   display: flex;
   padding-left: 14px;
   border-top: 1px solid var(--GRIS_SEMITRASPARENTE);
@@ -12,9 +12,9 @@
 }
 .floresteria__chips {
   margin: 12px 6px;
-  background-color: var(--GRIS_SCARLA);
+  background-color: var(--spacios);
   padding: 6px 12px;
-  color: var(--BLANCO_PURO);
+  color: var(--fuentes);
   cursor: pointer;
   border-radius: 15px;
   white-space: nowrap;
@@ -24,7 +24,8 @@
   font-size: 0.9rem;
 }
 .floresteria__chips:hover {
-  background-color: var(--GRIS_PERLA);
+  background-color: var(--lila-rosado-oscuro);
+  color: azure;
 }
 .floresteria__chips-wrapper::-webkit-scrollbar {
   height: 6px;
