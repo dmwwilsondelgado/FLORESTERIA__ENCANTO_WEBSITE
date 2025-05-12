@@ -1,7 +1,7 @@
-/* barra lateral de home*/
+/* barra lateral de floresteria */
 .floresteria__sidebar {
   grid-area: sidebar;
-  background-color: var(--gren_fondo);
+  background-color: var(--GRIS_SOMBRA);
   padding-top: 10px;
   overflow-y: scroll;
 }
@@ -18,13 +18,13 @@
   border-radius: 10px;
   transition: 0.5s;
   text-decoration: none;
-  color: var(--white-color);
+  color: var(--BLANCO_PURO);
   font-size: 0.9rem;
 }
 .floresteria__sidebar-title {
   font-size: 0.9rem;
   text-transform: uppercase;
-  color: var(--dark-grey-color);
+  color: var(--GRIS_CLARO);
   margin-left: 10px;
 }
 .floresteria__sidebar-icono {
@@ -32,9 +32,9 @@
   font-size: 1.5rem;
 }
 .floresteria__sidebar-item:hover {
-  background-color: var(--grey-color);
+  background-color: var(--GRIS_ACERO);
 }
 .floresteria__sidebar-linea-separador {
   margin: 12px 0;
-  border: solid 1px var(--primary-color);
+  border: solid 1px var(--GRIS_SEMITRASPARENTE);
 }

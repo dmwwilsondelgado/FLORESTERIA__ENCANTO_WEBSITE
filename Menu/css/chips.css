@@ -4,17 +4,17 @@
 .floresteria__chips-wrapper {
   max-width: calc(100vw - 240px);
   overflow-x: scroll;
-  background-color: var(--black_color);
+  background-color: var(--NEGRO_SUPER_profundo);
   display: flex;
   padding-left: 14px;
-  border-top: 1px solid var(--grey-color);
-  border-bottom: 1px solid var(--grey-color);
+  border-top: 1px solid var(--GRIS_SEMITRASPARENTE);
+  border-bottom: 1px solid var(--GRIS_SEMITRASPARENTE);
 }
 .floresteria__chips {
   margin: 12px 6px;
-  background-color: var(--dark-grey-color);
+  background-color: var(--GRIS_SCARLA);
   padding: 6px 12px;
-  color: var(--white-color);
+  color: var(--BLANCO_PURO);
   cursor: pointer;
   border-radius: 15px;
   white-space: nowrap;
@@ -24,11 +24,11 @@
   font-size: 0.9rem;
 }
 .floresteria__chips:hover {
-  background-color: var(--grey-color);
+  background-color: var(--GRIS_PERLA);
 }
 .floresteria__chips-wrapper::-webkit-scrollbar {
   height: 6px;
 }
 .floresteria__chips-wrapper:hover::-webkit-scrollbar-thumb {
-  background-color: var(--dark-grey-color);
+  background-color: var(--GRIS_OSCURO_CLARO);
 }
