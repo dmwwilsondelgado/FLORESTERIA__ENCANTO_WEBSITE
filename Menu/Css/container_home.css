@@ -1,13 +1,4 @@
 /* Container card  */
-:root {
-  --primary-color: #fa0b0b;
-  --white-color: #fff;
-  --grey-color: #cbcbcb;
-  --dark-grey-color: #454343;
-  --gren_fondo: #295f248a;
-  --black_color: #000000;
-}
-
 .floresteria__video-container{
   display: grid;
   /* grid-template-columns: repeat(4,1fr); */
