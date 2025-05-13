@@ -1,5 +1,5 @@
 /* Container video  */
-.floresteria__video-container{
+.floresteria__card{
     display: grid;
     /* grid-template-columns: repeat(4,1fr); */
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
@@ -12,12 +12,12 @@
     align-content: start;
   }
   
-  .floresteria__video-container-cover{
+  .floresteria__card-img-top{
     position: relative;
     transition: 0.5s;
   }
   
-  .floresteria__video-content{
+  .floresteria__card-body{
     margin-bottom: 25px;
     position: relative;
     width: 100%;
