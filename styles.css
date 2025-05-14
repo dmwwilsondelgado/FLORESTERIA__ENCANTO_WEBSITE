@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
 
-@import url(Recursos/variables.css);
-@import url(Recursos/section__header.css);
-@import url(Recursos/section-producto.css);
-@import url(Recursos/section-article.css);
-@import url(Recursos/importance-of-flowers.css);
-@import url(Recursos/section-productosHechosaMano.css);
-@import url(Recursos/section-sesion.css);
-@import url(Recursos//footer.css);
+@import url(LadingPage/variables.css);
+@import url(LadingPage/section__header.css);
+@import url(LadingPage/section-producto.css);
+@import url(LadingPage/section-article.css);
+@import url(LadingPage/importance-of-flowers.css);
+@import url(LadingPage/section-productosHechosaMano.css);
+@import url(LadingPage/section-sesion.css);
+@import url(LadingPage//footer.css);
 
 /*fuentes de letras*/
 .dancing-script {
