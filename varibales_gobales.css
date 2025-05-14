@@ -1,6 +1,19 @@
 :root{
-  --fuentes:#a31452;
-  --spacios:#fffcfc;
-  --lila-rosado-oscuro:#9e1b58;
-  --rosado-suave:#f19bcc;
+  /* sombras  */
+  --black_color: #000000;
+  --dark-grey-color: #454343;
+  --grey-color: #cbcbcb;
+  /* colores vivos */
+  --red-color: #fa0b0b;
+  --white-color: #fff;
+  --rosa-peonia: #e85a9c;
+  /* colores fondos e inputs */
+  --verde-salvia: #a8c9a1;
+  --crema-marfil: #f9f5ef;
+  --rosa-palido: #f4c6d7;
+  --verde-oliva: #c9d9b2;
+  --spacios: #fffcfc;
+  /* colores fuente */
+  --dorado-suave: #d7b377;
+  --fuentes: #a31452;
 }

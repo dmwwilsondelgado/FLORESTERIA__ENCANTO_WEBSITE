@@ -1,10 +1,21 @@
-/* Estilos generales */
-
 :root {
-  --primary-color: #3719dd;
-  --white-color: #fff;
+  /* sombras  */
+  --black_color: #000000;
+  --dark-grey-color: #454343;
   --grey-color: #cbcbcb;
-  --dark-grey-color: #4f4b4b;
+  /* colores vivos */
+  --red-color: #fa0b0b;
+  --white-color: #fff;
+  --rosa-peonia: #e85a9c;
+  /* colores fondos e inputs */
+  --verde-salvia: #a8c9a1;
+  --crema-marfil: #f9f5ef;
+  --rosa-palido: #f4c6d7;
+  --verde-oliva: #c9d9b2;
+  --spacios: #fffcfc;
+  /* colores fuente */
+  --dorado-suave: #d7b377;
+  --fuentes: #a31452;
 }
 
 * {
@@ -15,11 +26,12 @@
 
 body {
   display: flex;
-  background-color: var(--grey-color);
+  background-color: var(--crema-marfil);
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: "Arial", sans-serif;
+  /* font-family: "Arial", sans-serif; */
+  font-family: "Segoe UI", sans-serif;
 }
 
 .contenedor {
@@ -27,8 +39,9 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: var(--white-color);
-  padding: 10px; /* Ajustamos el padding */
+  padding: 30px;
   border-radius: 8px;
+  border: 2px solid var(--verde-oliva);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   height: auto;
@@ -39,7 +52,7 @@ body {
   transition: 1s;
 }
 .titulo {
-  color: var(--dark-grey-color);
+  color: var(--dorado-suave);
   margin-bottom: 25px;
 }
 
@@ -49,14 +62,15 @@ body {
 
 .formulario__input {
   width: 100%;
-  padding: 8px;
+  padding: 0.75rem;
   margin-bottom: 15px;
-  border: 1px solid var(--grey-color);
+  border: 1px solid var(--rosa-palido);
   border-radius: 5px;
   outline: none;
+  background-color: var(--white-color);
 }
 .formulario__input:focus{
-  box-shadow: 0 0 5px var(--primary-color);
+  box-shadow: 0 0 5px var(--rosa-palido);
 }
 
 .formulario__botones {
@@ -68,23 +82,18 @@ body {
 }
 
 .formulario__boton {
-  background-color: var(--white-color);
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  background-color: var(--rosa-peonia);
+  border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
+  padding: 20px;
+  color: var(--white-color);
   font-weight: bold;
-  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
 }
 
-.formulario__boton:hover {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-}
 
 .formulario__enlace {
-  color: var(--dark-grey-color);
+  color: var(--black_color);
   text-decoration: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -93,16 +102,5 @@ body {
 }
 
 .formulario__enlace:hover {
-  color: var(--primary-color);
-}
-
-.ya-tengo-usuario {
-  color: var(--dark-grey-color);
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.ya-tengo-usuario:hover {
-  color: var(--primary-color);
+  color: var(--verde-salvia);
 }
