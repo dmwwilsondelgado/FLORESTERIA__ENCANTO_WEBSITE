@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-	--rosa-palido: #c7a17a;
 	--background-color: #f9f5f0;
 	--dark-color: #151515;
     /* ----------------------------- */
@@ -105,14 +104,14 @@ html {
 
 .container-user .fa-user {
 	font-size: 3rem;
-	color: var(--rosa-palido);
+	color: var(--dark-color);
 	padding-right: 2.5rem;
 	border-right: 1px solid #e2e2e2;
 }
 
 .container-user .fa-basket-shopping {
 	font-size: 3rem;
-	color: var(--rosa-palido);
+	color: var(--dark-color);
 	padding-left: 1rem;
 }
 
