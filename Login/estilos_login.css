@@ -77,6 +77,10 @@ body {
   max-width: 400px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
+.login:hover{
+  transform: scale(1.1);
+  transition: 1s;
+}
 
 /* Subtítulo superior */
 .subtitle__content {

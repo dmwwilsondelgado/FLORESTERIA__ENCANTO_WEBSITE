@@ -44,6 +44,10 @@ body {
     min-height: 100px; 
     border: 2px solid var(--verde-oliva);
 }
+.contenedor:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
 .titulo {
     color: var(--dorado-suave);
     margin-bottom: 25px; 
