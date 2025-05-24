@@ -1,9 +1,12 @@
-const express = require('express');
+import express from "express";
 import UsuariosController from "../controllers/usuariosController.js";
 
+const router = express.Router();
+//crud de usuarios 
+router.get('/', UsuariosController.getAllUsuarios);
+//router.post('/', UsuariosController.createUsuarios);
+//router.put('/:id_usuario', UsuariosController.updateUsuarios);
+//router.patch('/:id_usuario', UsuariosController.updateParcialUsuarios);
+//router.delete('/:id_usuario', UsuariosController.deleteUsuarios);
 
-const router  = express.Router();
-//crud de postman 
-router.get('/',UsuariosController.getAllUsuarios);
-
-module.exports = router;
+export default router;  

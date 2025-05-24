@@ -1,17 +1,10 @@
-//const express = require('express'); 
-//const bodyParser = require('body-parser');
+import express from 'express';
+import usuariosRoutes from './src/routes/usuariosRouter.js';
 
-
-
-//app.use(bodyParser.json());
-//app.use(express.urlencoded({ extended: true }));
-//const app = express();
-//app.use(express.json());
-
-const express = require('express');
 const app = express();
 app.use(express.json());
 
+app.use('/usuarios', usuariosRoutes); 
 app.listen(3000, () => 
 {
 console.log(`Servidor corriendo en: http://localhost:3000`);
