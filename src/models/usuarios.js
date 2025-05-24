@@ -15,13 +15,18 @@ class Usuarios {
             throw new Error("Error: al Obtener los Usuarios");
         }
     }
-    async getUsuarios(){
+    async getUsuariosBy(id) {
         try {
-            
+            const [rows] = await connection.query('SELECT * FROM usuarios WHERE id_usuario = ?',[id]);
+            if (rows.length === 0) {
+                throw new Error("Usuario no Encontrado");
+            }
+            return rows[0];
         } catch (error) {
-            
+            throw new Error("Error: al obtener usuario por id");
         }
     }
+
     async createUsuarios(nombre_usuario,apellido_usuario,correo,password,tipo_usuario) {
         try {
             const[result] = await connection.query('insert into usuarios (nombre_usuario, apellido_usuario, correo, password, tipo_usuario)values (?, ?, ?, ?, ?)',
