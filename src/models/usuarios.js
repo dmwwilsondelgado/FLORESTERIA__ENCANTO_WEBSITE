@@ -15,11 +15,37 @@ class Usuarios {
             throw new Error("Error: al Obtener los Usuarios");
         }
     }
-    async create(nombre_usuario,apellido_usuario,correo,password,tipo_usuario) {
+    async getUsuarios(){
+        try {
+            
+        } catch (error) {
+            
+        }
+    }
+    async createUsuarios(nombre_usuario,apellido_usuario,correo,password,tipo_usuario) {
         try {
             const[result] = await connection.query('insert into usuarios (nombre_usuario, apellido_usuario, correo, password, tipo_usuario)values (?, ?, ?, ?, ?)',
                 [nombre_usuario,apellido_usuario,correo,password,tipo_usuario]);
                 return {id_usuario:result.id_usuario,
+                    nombre_usuario,
+                    apellido_usuario,
+                    correo,
+                    password,
+                    tipo_usuario
+                }
+        } catch (error) {
+            throw new Error("Error: al Crear los usuarios");
+        }
+    };
+    async updateUsuarios(id_usuario,nombre_usuario,apellido_usuario,correo,password,tipo_usuario) {
+        try {
+            const[result] = await connection.query('UPDATE usuarios SET id_usuario = ? ,nombre_usuario = ?, apellido_usuario = ?, correo = ?, password = ?, tipo_usuario = ? WHERE id_usuario = ?',
+                [id_usuario,nombre_usuario,apellido_usuario,correo,password,tipo_usuario]);
+                if(result.affectedRows === 0){
+                    throw new Error("Usuario no Encontrado ");
+                }
+                return {
+                    id_usuario,
                     nombre_usuario,
                     apellido_usuario,
                     correo,
