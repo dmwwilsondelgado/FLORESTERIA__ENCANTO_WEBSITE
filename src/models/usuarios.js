@@ -7,12 +7,12 @@ class Usuarios {
    */
   // creamos una funcion asincrona  esta esta compuesta por un try catch que captura el error y si funcina 
   //consulta ala base de datos danto un objeto 
-    async getAll() {
+    async getAllUsuarios() {
         try {
             const[rows] = await connection.query("SELECT * FROM usuarios");
             return[rows];
         } catch (error) {
-            throw new Error("Error: al Obtener los Uusarios");
+            throw new Error("Error: al Obtener los Usuarios");
         }
     }
 }

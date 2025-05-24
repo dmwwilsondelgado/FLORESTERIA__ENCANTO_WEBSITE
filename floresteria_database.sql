@@ -83,3 +83,7 @@ create table comentarios_articulo(
   foreign key (numero_factura) references facturacion(numero_factura),
   foreign key (id_usuario) references usuarios(id_usuario)
 );
+
+
+
+insert into usuarios(id_usuario,nombre_usuario,apellido_usuario,correo,password,tipo_usuario) values ('1','Wilson','Delgado','wilsondelgadomoreno@gmail.com',1102717619,'usuario'); -- primera insertacion ala base de datos 
