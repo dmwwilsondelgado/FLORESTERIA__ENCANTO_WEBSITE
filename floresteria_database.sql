@@ -5,7 +5,7 @@ create table usuarios(
   apellido_usuario VARCHAR(50),
   correo VARCHAR(255) UNIQUE NOT NULL,
   password VARCHAR(255) NOT NULL, -- aquí va el hash de la contraseña
-  tipo_usuario VARCHAR(10),
+  tipo_usuario ENUM('admin', 'cliente') DEFAULT 'cliente',
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,-- Fecha de creación
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP -- Fecha de actualización,
 );
