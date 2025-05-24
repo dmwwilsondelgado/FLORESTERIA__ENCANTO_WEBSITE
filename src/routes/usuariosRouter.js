@@ -1,8 +1,8 @@
 const express = require('express');
-const router  = express.Router();
-const usuariosController = require('../controllers/usuariosController.js')
+import UsuariosController from "../controllers/usuariosController.js";
+
 //crud de postman 
-router.get('/',usuariosController)
+router.get('/',UsuariosController.getAllUsuarios);
 
-
+const router  = express.Router();
 module.exports = router;
