@@ -1,4 +1,4 @@
-use floresteria;
+use floresteria_encanto_database;
 create table usuarios(
   id_usuario INT AUTO_INCREMENT PRIMARY KEY,-- ID de la categoría (clave primaria)
   nombre_usuario VARCHAR(255) NOT NULL,
@@ -12,7 +12,7 @@ create table usuarios(
 
 create table categoria_articulos(
   id_categoria_producto int primary key,
-  nombre_categoria varchar(30)
+  nombre_categoria varchar(100) not null
 );
 show databases;
 
@@ -83,8 +83,3 @@ create table comentarios_articulo(
   foreign key (numero_factura) references facturacion(numero_factura),
   foreign key (id_usuario) references usuarios(id_usuario)
 );
-
-
-
-
-
