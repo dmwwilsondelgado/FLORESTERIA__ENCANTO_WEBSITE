@@ -56,6 +56,28 @@ class Usuarios {
             throw new Error("Error: al Crear los usuarios");
         }
     };
+    // codigo de edison
+    async updateParcial(campos, id_usuario) {
+    try {
+        let sql = "UPDATE usuarios SET ";
+        for (let cont = 0; cont < Object.keys(campos).length; cont++) {
+        let value = Object.keys(campos)[cont];
+        sql += `${value} = '${campos[value]}'`;
+        if (cont == Object.keys(campos).length - 1) {
+            sql += "";
+        }
+        else {
+            sql += ",";
+        }
+        }
+        sql += ` WHERE id_usuario = ${id_usuario}`;
+        const [result] = await connection.query(sql);
+        if (result.affectedRows === 0) { throw new Error("Usuario no encontrado"); }
+        return { mensaje: "Usuario Actualizado" }
+        } catch (error) {
+        throw new Error("ERROR: Al Actualizar el Usuario Parcialmente");
+        }
+    }
 }
 
 // exportamos la busqueda 
