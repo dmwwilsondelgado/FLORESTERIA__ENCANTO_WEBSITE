@@ -78,6 +78,27 @@ class Usuarios {
         throw new Error("ERROR: Al Actualizar el Usuario Parcialmente");
         }
     }
+    async delete(id_usuario) {
+        const usuariosRelacionado = await this.relacionadaConUsuarios(id_usuario);
+        if (usuariosRelacionado) {
+            return{
+                error: true,
+                mensaje: "No se puede eliminar el Usuario por que se encuentra asociado a uno o mas Tblas"
+            };
+        }
+        const [result] = await connection.query("DELETE FROM usuarios WHERE id_usuario = ?",[id_lenguaje]);
+        if (result.affectedRows === 0) {
+            return{
+                error : true,
+                mensaje: "Usuario no encontrado"
+            }
+        };
+        return{
+            error: false,
+            mensaje: "Usuario eliminado de manera Exitosa sin ningun incoveniente"
+        }
+        
+    }
 }
 
 // exportamos la busqueda 
