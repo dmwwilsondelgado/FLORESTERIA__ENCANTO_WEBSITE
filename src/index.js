@@ -1,13 +1,10 @@
 import express from "express";
 import bodyParser from "body-parser";
 
-// import categoriasRoutes from  "./routes/categoriasRoutes.js"
-// const app = express();
-// app.use(bodyParser.json())
-// app.use(express.urlencoded({ "extended": true }));
-// app.use("/categorias", categoriasRoutes);
-
+const app = express();
+app.use(bodyParser.json());
+app.use(express.urlencoded({extended: true}));
 
 app.listen(3000, () => {
-    console.log("Creando Nuevo Mundo ");    
+    console.log("Inicializando Proyecto ");    
 });
