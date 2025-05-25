@@ -12,29 +12,69 @@ class UsuariosController {
   }
   static getUsuarioById = async (req, res) => {
     try {
-      const { id } = req.params;
-      const usuarios = new Usuarios(); // 👈 Asumiendo que Usuarios tiene el método getById
-      const resultado = await usuarios.getById(id);
-
-      if (!resultado) {
-        return res.status(404).json({ mensaje: 'Usuario no encontrado' });
-      }
+      // Extraemos id_usuario (coincide con la ruta)
+      const { id_usuario } = req.params;
+      const usuarios = new Usuarios();
+      const resultado = await usuarios.getUsuarioById(id_usuario);
 
       res.json(resultado);
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      // Si el error trae status 404, lo usamos; si no, asumimos 500
+      const status = error.status || 500;
+      res.status(status).json({ error: error.message });
     }
   }
-  static createUsuarios = async (req,res) => {
-    try {
-      const {nombre_usuario,apellido_usuario,correo,password,tipo_usuario} = req.body;
-      const usuarios = new Usuarios();
-      const  resultado  = await usuarios.createUsuarios(nombre_usuario,apellido_usuario,correo,password,tipo_usuario);
-      res.status(201).json(resultado);
-    } catch (error) {
-      res.status(500).json({erro:error.message})
-    }
-  }
+  // static createUsuarios = async (req,res) => {
+  //   try {
+  //     const {nombre_usuario,apellido_usuario,correo,password,tipo_usuario} = req.body;
+  //     const usuarios = new Usuarios();
+  //     const  resultado  = await usuarios.createUsuarios(nombre_usuario,apellido_usuario,correo,password,tipo_usuario);
+  //     res.status(201).json(resultado);
+  //   } catch (error) {
+  //     res.status(500).json({erro:error.message})
+  //   }
+  // }
+  // static createUsuario = async (req, res) => {
+  //   try {
+  //     const nuevo = await new Usuarios().createUsuarios(req.body);
+  //     res.status(201).json(nuevo);
+  //   } catch (err) {
+  //     res.status(500).json({ error: err.message });
+  //   }
+  // }
+
+  // static updateUsuario = async (req, res) => {
+  //   try {
+  //     const body = { ...req.body, id_usuario: parseInt(req.params.id, 10) };
+  //     const actualizado = await new Usuarios().updateUsuarios(body);
+  //     if (!actualizado) return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+  //     res.status(200).json(actualizado);
+  //   } catch (err) {
+  //     res.status(500).json({ error: err.message });
+  //   }
+  // }
+
+  // static patchUsuario = async (req, res) => {
+  //   try {
+  //     const id = parseInt(req.params.id, 10);
+  //     const ok = await new Usuarios().updateParcial(req.body, id);
+  //     if (!ok) return res.status(404).json({ mensaje: 'Usuario no encontrado o sin campos a actualizar' });
+  //     res.status(200).json({ mensaje: 'Usuario parcialmente actualizado' });
+  //   } catch (err) {
+  //     res.status(500).json({ error: err.message });
+  //   }
+  // }
+
+  // static deleteUsuario = async (req, res) => {
+  //   try {
+  //     const id = parseInt(req.params.id, 10);
+  //     const ok = await new Usuarios().deleteById(id);
+  //     if (!ok) return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+  //     res.status(200).json({ mensaje: 'Usuario eliminado' });
+  //   } catch (err) {
+  //     res.status(500).json({ error: err.message });
+  //   }
+  // }
 }  
 
 

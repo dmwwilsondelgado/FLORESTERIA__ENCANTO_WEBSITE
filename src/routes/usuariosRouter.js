@@ -1,12 +1,17 @@
 import express from "express";
 import UsuariosController from "../controllers/usuariosController.js";
-
 const router = express.Router();
-//crud de usuarios 
-router.get('/', UsuariosController.getAllUsuarios);
-//router.post('/', UsuariosController.createUsuarios);
-//router.put('/:id_usuario', UsuariosController.updateUsuarios);
-//router.patch('/:id_usuario', UsuariosController.updateParcialUsuarios);
-//router.delete('/:id_usuario', UsuariosController.deleteUsuarios);
 
-export default router;  
+router.get('/', UsuariosController.getAllUsuarios);
+// Obtener un usuario por su ID
+router.get('/:id_usuario', UsuariosController.getUsuarioById);
+// Crear un nuevo usuario
+// router.post('/', UsuariosController.createUsuarios);
+// Actualizar un usuario completamente (PUT)
+//router.put('/:id_usuario', UsuariosController.updateUsuario);
+// Actualización parcial de usuario (PATCH) — si tienes este método
+//router.patch('/:id_usuario', UsuariosController.updateUsuario);
+// Eliminar un usuario
+//router.delete('/:id_usuario', UsuariosController.deleteUsuario);
+
+export default router;
