@@ -6,7 +6,7 @@ router.get('/', UsuariosController.getAllUsuarios);
 // Obtener un usuario por su ID
 router.get('/:id_usuario', UsuariosController.getUsuarioById);
 // Crear un nuevo usuario
-// router.post('/', UsuariosController.createUsuarios);
+router.post('/', UsuariosController.createUsuarios);
 // Actualizar un usuario completamente (PUT)
 //router.put('/:id_usuario', UsuariosController.updateUsuario);
 // Actualización parcial de usuario (PATCH) — si tienes este método

@@ -4,6 +4,9 @@ import usuariosRoutes from './src/routes/usuariosRouter.js';
 const app = express();
 app.use(express.json());
 
+// si voy a recibir formulario activo 
+app.use(express.urlencoded({ extended: true })); // sin esto naaa 
+
 app.use('/usuarios', usuariosRoutes); 
 app.listen(3000, () => 
 {

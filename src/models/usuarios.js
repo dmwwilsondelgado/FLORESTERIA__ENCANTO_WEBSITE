@@ -26,12 +26,9 @@ class Usuarios {
     //         throw new Error("Error: al obtener usuario por id");
     //     }
     // }
-        async getUsuarioById(id) {
+    async getUsuarioById(id) {
         try {
-        const [rows] = await connection.query(
-            'SELECT * FROM usuarios WHERE id_usuario = ?',
-            [id]
-        );
+        const [rows] = await connection.query('SELECT * FROM usuarios WHERE id_usuario = ?',[id]);
         if (rows.length === 0) {
             // Lanzamos un 404 más semántico
             const err = new Error("Usuario no encontrado");
@@ -46,21 +43,21 @@ class Usuarios {
         }
     }
 
-    // async createUsuarios(nombre_usuario,apellido_usuario,correo,password,tipo_usuario) {
-    //     try {
-    //         const[result] = await connection.query('insert into usuarios (nombre_usuario, apellido_usuario, correo, password, tipo_usuario)values (?, ?, ?, ?, ?)',
-    //             [nombre_usuario,apellido_usuario,correo,password,tipo_usuario]);
-    //             return {id_usuario:result.id_usuario,
-    //                 nombre_usuario,
-    //                 apellido_usuario,
-    //                 correo,
-    //                 password,
-    //                 tipo_usuario
-    //             }
-    //     } catch (error) {
-    //         throw new Error("Error: al Crear los usuarios");
-    //     }
-    // };
+    async createUsuarios(nombre_usuario,apellido_usuario,correo,password,tipo_usuario) {
+        try {
+            const[result] = await connection.query('insert into usuarios (nombre_usuario, apellido_usuario, correo, password, tipo_usuario)values (?, ?, ?, ?, ?)',
+                [nombre_usuario,apellido_usuario,correo,password,tipo_usuario]);
+                return {id_usuario:result.insertId,
+                    nombre_usuario,
+                    apellido_usuario,
+                    correo,
+                    password,
+                    tipo_usuario
+                }
+        } catch (error) {
+            throw new Error("Error: al Crear los usuarios");
+        }
+    };
     // async updateUsuarios(id_usuario,nombre_usuario,apellido_usuario,correo,password,tipo_usuario) {
     //     try {
     //         const[result] = await connection.query('UPDATE usuarios SET id_usuario = ? ,nombre_usuario = ?, apellido_usuario = ?, correo = ?, password = ?, tipo_usuario = ? WHERE id_usuario = ?',

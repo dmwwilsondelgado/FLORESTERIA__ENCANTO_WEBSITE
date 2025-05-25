@@ -24,16 +24,16 @@ class UsuariosController {
       res.status(status).json({ error: error.message });
     }
   }
-  // static createUsuarios = async (req,res) => {
-  //   try {
-  //     const {nombre_usuario,apellido_usuario,correo,password,tipo_usuario} = req.body;
-  //     const usuarios = new Usuarios();
-  //     const  resultado  = await usuarios.createUsuarios(nombre_usuario,apellido_usuario,correo,password,tipo_usuario);
-  //     res.status(201).json(resultado);
-  //   } catch (error) {
-  //     res.status(500).json({erro:error.message})
-  //   }
-  // }
+  static createUsuarios = async (req,res) => {
+    try {
+      const {nombre_usuario,apellido_usuario,correo,password,tipo_usuario} = req.body;
+      const usuarios = new Usuarios();
+      const  resultado  = await usuarios.createUsuarios(nombre_usuario,apellido_usuario,correo,password,tipo_usuario);
+      res.status(201).json(resultado);
+    } catch (error) {
+      res.status(500).json({erro:error.message})
+    }
+  }
   // static createUsuario = async (req, res) => {
   //   try {
   //     const nuevo = await new Usuarios().createUsuarios(req.body);
