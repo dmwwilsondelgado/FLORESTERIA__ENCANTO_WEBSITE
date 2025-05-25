@@ -58,25 +58,25 @@ class Usuarios {
             throw new Error("Error: al Crear los usuarios");
         }
     };
-    // async updateUsuarios(id_usuario,nombre_usuario,apellido_usuario,correo,password,tipo_usuario) {
-    //     try {
-    //         const[result] = await connection.query('UPDATE usuarios SET id_usuario = ? ,nombre_usuario = ?, apellido_usuario = ?, correo = ?, password = ?, tipo_usuario = ? WHERE id_usuario = ?',
-    //             [id_usuario,nombre_usuario,apellido_usuario,correo,password,tipo_usuario]);
-    //             if(result.affectedRows === 0){
-    //                 throw new Error("Usuario no Encontrado ");
-    //             }
-    //             return {
-    //                 id_usuario,
-    //                 nombre_usuario,
-    //                 apellido_usuario,
-    //                 correo,
-    //                 password,
-    //                 tipo_usuario
-    //             }
-    //     } catch (error) {
-    //         throw new Error("Error: al Crear los usuarios");
-    //     }
-    // };
+    async updateUsuario(id_usuario,nombre_usuario,apellido_usuario,correo,password,tipo_usuario) {
+        try {
+            const[result] = await connection.query('UPDATE usuarios SET nombre_usuario = ?, apellido_usuario = ?, correo = ?, password = ?, tipo_usuario = ? WHERE id_usuario = ?',
+                [nombre_usuario,apellido_usuario,correo,password,tipo_usuario,id_usuario]);
+                if(result.affectedRows === 0){
+                    throw new Error("Usuario no Encontrado ");
+                }
+                return {
+                    id_usuario,
+                    nombre_usuario,
+                    apellido_usuario,
+                    correo,
+                    password,
+                    tipo_usuario
+                }
+        } catch (error) {
+            throw new Error("Error: al Crear los usuarios");
+        }
+    };
     // async updateParcial(campos = {}, id_usuario) {
     //     const keys = Object.keys(campos);
     //     if (keys.length === 0) return null;

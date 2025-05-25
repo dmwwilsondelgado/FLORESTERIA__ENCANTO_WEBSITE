@@ -1,4 +1,5 @@
 import express from "express";
+
 import UsuariosController from "../controllers/usuariosController.js";
 const router = express.Router();
 
@@ -8,7 +9,7 @@ router.get('/:id_usuario', UsuariosController.getUsuarioById);
 // Crear un nuevo usuario
 router.post('/', UsuariosController.createUsuarios);
 // Actualizar un usuario completamente (PUT)
-//router.put('/:id_usuario', UsuariosController.updateUsuario);
+router.put('/:id_usuario', UsuariosController.updateUsuario);
 // Actualización parcial de usuario (PATCH) — si tienes este método
 //router.patch('/:id_usuario', UsuariosController.updateUsuario);
 // Eliminar un usuario
