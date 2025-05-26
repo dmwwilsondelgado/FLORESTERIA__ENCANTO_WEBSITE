@@ -11,3 +11,8 @@ npm install --save-dev nodemon
 npm i body-parser
 
 npm run dev #iniciar servidor 
+
+
+
+
+crud para inevtigar  https://github.com/Geracros13/CRUD-HTML-CSS-JS-
