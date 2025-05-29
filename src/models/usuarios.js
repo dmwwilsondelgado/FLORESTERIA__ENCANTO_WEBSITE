@@ -91,7 +91,6 @@ class Usuarios {
         return result.affectedRows > 0;
         } catch (error){ 
             throw new Error("Errros al eliminiar usuario",error);
-            
         }
     }
 }
