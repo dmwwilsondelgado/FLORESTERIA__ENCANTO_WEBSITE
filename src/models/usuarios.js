@@ -74,59 +74,26 @@ class Usuarios {
                     tipo_usuario
                 }
         } catch (error) {
-            throw new Error("Error: al Crear los usuarios");
+            throw error;
+            // throw new Error("Error: al actlizar los usuarios");
         }
     };
-    // async updateParcial(campos = {}, id_usuario) {
-    //     const keys = Object.keys(campos);
-    //     if (keys.length === 0) return null;
-    //     const setClause = keys.map(k => `${k} = ?`).join(', ');
-    //     const values    = keys.map(k => campos[k]);
-    //     const [result] = await connection.query(
-    //     `UPDATE usuarios SET ${setClause} WHERE id_usuario = ?`,
-    //     [...values, id_usuario]
-    //     );
-    //     return result.affectedRows > 0;
-    // }
 
-    // async updateUsuarios({ id_usuario, nombre_usuario, apellido_usuario, correo, password, tipo_usuario }) {
-    //     const [result] = await connection.query(
-    //     `UPDATE usuarios
-    //     SET nombre_usuario = ?, apellido_usuario = ?, correo = ?, password = ?, tipo_usuario = ?
-    //     WHERE id_usuario = ?`,
-    //     [nombre_usuario, apellido_usuario, correo, password, tipo_usuario, id_usuario]
-    //     );
-    //     if (result.affectedRows === 0) return null;
-    //     return { id_usuario, nombre_usuario, apellido_usuario, correo, password, tipo_usuario };
-    // }
-    // async delete(id_usuario) {
-    //     const usuariosRelacionado = await this.relacionadaConUsuarios(id_usuario);
-    //     if (usuariosRelacionado) {
-    //         return{
-    //             error: true,
-    //             mensaje: "No se puede eliminar el Usuario por que se encuentra asociado a uno o mas Tblas"
-    //         };
-    //     }
-    //     const [result] = await connection.query("DELETE FROM usuarios WHERE id_usuario = ?",[id_lenguaje]);
-    //     if (result.affectedRows === 0) {
-    //         return{
-    //             error : true,
-    //             mensaje: "Usuario no encontrado"
-    //         }
-    //     };
-    //     return{
-    //         error: false,
-    //         mensaje: "Usuario eliminado de manera Exitosa sin ningun incoveniente"
-    //     }
-        
-    // }
-    // async deleteById(id_usuario) {
-    //     const [result] = await connection.query(
-    //     'DELETE FROM usuarios WHERE id_usuario = ?',
-    //     [id_usuario]
-    //     );
-    //     return result.affectedRows > 0;
-    // }
+    async deleteById(id_usuario) {
+        const [result] = await connection.query(
+        'DELETE FROM usuarios WHERE id_usuario = ?',
+        [id_usuario]
+        );
+        try {
+            if(result.affectedRows === 0){
+            return null;
+        }
+        return result.affectedRows > 0;
+        } catch (error){ 
+            throw new Error("Errros al eliminiar usuario",error);
+            
+        }
+    }
 }
 
 // exportamos la busqueda 

@@ -60,27 +60,27 @@ class UsuariosController {
     }
   }
 
-  // static patchUsuario = async (req, res) => {
-  //   try {
-  //     const id = parseInt(req.params.id, 10);
-  //     const ok = await new Usuarios().updateParcial(req.body, id);
-  //     if (!ok) return res.status(404).json({ mensaje: 'Usuario no encontrado o sin campos a actualizar' });
-  //     res.status(200).json({ mensaje: 'Usuario parcialmente actualizado' });
-  //   } catch (err) {
-  //     res.status(500).json({ error: err.message });
-  //   }
-  // }
+  static patchUsuario = async (req, res) => {
+    try {
+      const id = parseInt(req.params.id, 10);
+      const ok = await new Usuarios().updateParcial(req.body, id);
+      if (!ok) return res.status(404).json({ mensaje: 'Usuario no encontrado o sin campos a actualizar' });
+      res.status(200).json({ mensaje: 'Usuario parcialmente actualizado' });
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  }
 
-  // static deleteUsuario = async (req, res) => {
-  //   try {
-  //     const id = parseInt(req.params.id, 10);
-  //     const ok = await new Usuarios().deleteById(id);
-  //     if (!ok) return res.status(404).json({ mensaje: 'Usuario no encontrado' });
-  //     res.status(200).json({ mensaje: 'Usuario eliminado' });
-  //   } catch (err) {
-  //     res.status(500).json({ error: err.message });
-  //   }
-  // }
+  static deleteUsuario = async (req, res) => {
+    try {
+      const id = parseInt(req.params.id, 10);
+      const ok = await new Usuarios().deleteById(id);
+      if (!ok) return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+      res.status(200).json({ mensaje: 'Usuario eliminado' });
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  }
 }  
 
 
