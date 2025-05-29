@@ -10,9 +10,10 @@ router.get('/:id_usuario', UsuariosController.getUsuarioById);
 router.post('/', UsuariosController.createUsuarios);
 // Actualizar un usuario completamente (PUT)
 router.put('/:id_usuario', UsuariosController.updateUsuario);
+// router.delete('/:id_usuario:',UsuariosController.deleteUsuario)
 // Actualización parcial de usuario (PATCH) — si tienes este método
 //router.patch('/:id_usuario', UsuariosController.updateUsuario);
 // Eliminar un usuario
-//router.delete('/:id_usuario', UsuariosController.deleteUsuario);
-
+router.delete('/:id_usuario', UsuariosController.deleteUsuario);
+1
 export default router;

@@ -79,18 +79,19 @@ class Usuarios {
         }
     };
 
-    async deleteById(id_usuario) {
-        const [result] = await connection.query(
-        'DELETE FROM usuarios WHERE id_usuario = ?',
-        [id_usuario]
-        );
+    async deleteUsuario(id_usuario) {
         try {
+            const [result] = await connection.query(
+            'DELETE FROM usuarios WHERE id_usuario = ?',
+            [id_usuario]
+            );
             if(result.affectedRows === 0){
             return null;
         }
         return result.affectedRows > 0;
         } catch (error){ 
-            throw new Error("Errros al eliminiar usuario",error);
+            throw error
+            // throw new Error("Errros al eliminiar usuario",error);
         }
     }
 }
