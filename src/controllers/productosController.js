@@ -48,7 +48,7 @@ class ProductosController {
         precio,
         stock,
         categoria_producto
-        )
+        );
       if (!respuesta) {
         return res.status(404),json({mensage: "Producto no encontrado "})
         }

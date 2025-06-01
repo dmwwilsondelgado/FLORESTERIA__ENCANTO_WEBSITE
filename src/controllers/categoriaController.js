@@ -55,6 +55,27 @@ class CategoriaController {
             })
         }
     }
+    static deleteCategoria  = async ( req, res ) => {
+        try {
+            const id = parseInt(req.params.id_categoria_producto,10);
+            if (isNaN(id)) {
+                return res.status(400).json({
+                    message: " ID  categoria invalida "
+                })
+            }
+            const respuesta = await new Categorias().deleteCategoria(id);
+            if (!respuesta) {
+                return res.status(404).json({
+                    message: "Categoria No Encontrada "
+                });
+            }
+            res.status(200).json({ 
+                message: " Categoria eliminada Corectamente " 
+            });
+        } catch (error) {
+            throw error
+        }
+    }
 }
 
 
