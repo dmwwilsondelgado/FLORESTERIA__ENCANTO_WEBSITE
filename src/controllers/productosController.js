@@ -10,11 +10,11 @@ class ProductosController {
       res.status(500).json({error: error.message});
     }
   }
-  static getPrtoductosById = async (req, res) => {
+  static getProductosById = async (req, res) => {
     try {
-      const { id_usuario } = req.params;
+      const { id_producto } = req.params;
       const productos = new Productos();
-      const resultado = await productos.getPrtoductosById(id_producto);
+      const resultado = await productos.getProductosById(id_producto);
       res.json(resultado);
     } catch (error) {
       // Si el error trae status 404, lo usamos; si no, asumimos 500
