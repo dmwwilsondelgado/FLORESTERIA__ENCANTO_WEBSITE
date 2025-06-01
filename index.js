@@ -1,6 +1,6 @@
 import express from 'express';
 import usuariosRoutes from './src/routes/usuariosRouter.js';
-import productosRoutes from './src/models/productosRoutes.js';
+import productosRoutes from './src/routes/productosRouter.js';
 import bodyParser from 'body-parser';
 const { json } = bodyParser;
 

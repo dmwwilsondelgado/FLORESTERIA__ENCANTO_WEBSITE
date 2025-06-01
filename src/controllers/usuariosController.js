@@ -11,7 +11,7 @@ class UsuariosController {
     }
   }
   static getUsuarioById = async (req, res) => {
-    try {
+    try { 
       // Extraemos id_usuario (coincide con la ruta)
       const { id_usuario } = req.params;
       const usuarios = new Usuarios();

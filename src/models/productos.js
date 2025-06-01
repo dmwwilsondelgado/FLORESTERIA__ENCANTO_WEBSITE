@@ -14,7 +14,7 @@ class Productos {
             throw new Error("No se a podido traer Productos vuelve a intentarlo  ");
         }
     }
-    async getProductosbyId(id){
+    async getProductosById(id){
         try {
             const [rows] = await connection.query("SELECT  * FROM  productos WHERE id_producto = ? ",[id]);
             if (rows.affectedRows === 0) {
@@ -45,16 +45,16 @@ class Productos {
             throw new Error("Eror al crear Producto");
         }
     } 
-    async updateProducto(id_usuario,nombre_producto,descripcion,precio,stock,categoria_producto) {
+    async updateProducto(id_producto,nombre_producto,descripcion,precio,stock,categoria_producto) {
         try {
             const [result] =  await connection.query("",
-                [id_usuario,nombre_producto,descripcion,precio,stock,categoria_producto]
+                [id_producto,nombre_producto,descripcion,precio,stock,categoria_producto]
             )
             if (result.affectedRows === 0) {
                 throw new Error(" Producto no encontrado");              
             }
             return{
-                id_usuario,
+                id_producto,
                 nombre_producto,
                 descripcion,
                 precio,
