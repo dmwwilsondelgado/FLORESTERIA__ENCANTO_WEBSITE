@@ -31,6 +31,30 @@ class CategoriaController {
             res.status(500).json({error:error.message});
         }
     }
+    static updateCategorias = async (req ,res) =>{
+        try {
+            const id_categoria_producto = parseInt(req.params.id_categoria_producto,10);
+            const {nombre_categoria}  =  req.body;
+            if (isNaN(id_categoria_producto)) {
+                return res.status(400).json({
+                    message: " ID categoria invalida intente de nuevo "
+                })
+            }
+            const respuesta = await new Categorias().updateCategoria(
+                nombre_categoria,
+            );
+            if (!respuesta) {
+                return res.status(400).json({
+                    message: " Categoria Inavalida intente de nuevo "
+                });
+            }
+            res.status(200).json(respuesta)
+        } catch (error) {
+            res.status(500).json({
+                error:error.message
+            })
+        }
+    }
 }
 
 
