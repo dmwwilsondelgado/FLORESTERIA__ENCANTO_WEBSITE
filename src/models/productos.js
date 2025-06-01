@@ -38,6 +38,13 @@ class Productos {
         } catch (error) {
             throw new Error("Eror al crear Producto");
         }
+    } 
+    async updateProducto(id_usuario,nombre_producto,descripcion,precio,stock,categoria_producto) {
+        try {
+            const [result] =  await connection.query("")
+        } catch (error) {
+            throw error
+        }
     }
 }
 
