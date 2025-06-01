@@ -1,6 +1,6 @@
 import express from 'express';
 import usuariosRoutes from './src/routes/usuariosRouter.js';
-
+import productosRoutes from './src/models/productosRoutes.js';
 import bodyParser from 'body-parser';
 const { json } = bodyParser;
 
@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true })); // sin esto naaa  para recibir 
 
 
 app.use('/usuarios', usuariosRoutes); 
-app.use('')
+app.use('/productos',productosRoutes)
 
 
 

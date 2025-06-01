@@ -1,5 +1,11 @@
 import connection from "../utils/db.js";
 class Productos {
+    /**
+   * Metodo para obtener los registros de la base de datos
+   * @returns  {Array<Object>} listado de los usuarios en un arreglo
+   */
+  // creamos una funcion asincrona  esta esta compuesta por un try catch que captura el error y si funcina 
+  //consulta ala base de datos danto un objeto 
     async getAllProductos() {
         try {
             const [rows] = await connection.query("SELECT * FROM productos");
@@ -70,7 +76,6 @@ class Productos {
             }
         } catch (error) {
             throw error;
-            
         }
     }
 }
