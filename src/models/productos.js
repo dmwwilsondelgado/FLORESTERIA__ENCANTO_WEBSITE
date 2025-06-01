@@ -8,9 +8,9 @@ class Productos {
             throw new Error("No se a podido traer Productos vuelve a intentarlo  ");
         }
     }
-    async getProductosbyId(){
+    async getProductosbyId(id){
         try {
-            
+            const [rows] = await connection.query("SELECT  * FROM  productos WHERE id_producto = ? ",[id])
         } catch (error) {
             
         }
