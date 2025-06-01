@@ -5,10 +5,10 @@ const router = express.Router();
 
 router.get('/', CategoriaController.getAllProductos);
 // Obtener un producto por su ID
-router.get('/:id_producto', CategoriaController.getPrtoductosById);
+router.get('/:id_categoria_producto', CategoriaController.getPrtoductosById);
 // Crear un nuevo producto
 router.post('/', CategoriaController.createProducto);
 // Actualizar un producto completamente (PUT)
-router.put('/:id_producto', CategoriaController.updateProducto);
+router.put('/:id_categoria_producto', CategoriaController.updateProducto);
 // Eliminar un producto
-router.delete('/:id_producto', CategoriaController.deleteProducto);
+router.delete('/:id_categoria_producto', CategoriaController.deleteProducto);
