@@ -24,6 +24,21 @@ class Productos {
             throw new Error(" Error al  obtener  Productos por id :");
         }
     }
+    async createProducto(nombre_producto,descripcion,precio,stock,categoria_producto) {
+        try {
+            const [result] = await connection.query("INSERT INTO productos (nombre_producto, descripcion, precio, stock, categoria_producto) values('?', ?, ?, ?, ?, ?)",
+            [nombre_producto,descripcion,precio,stock,categoria_producto]);
+            return{id_producto:result.insertId,
+            nombre_producto,
+            descripcion,
+            precio,
+            stock,
+            categoria_producto
+        }
+        } catch (error) {
+            throw new Error("Eror al crear Producto");
+        }
+    }
 }
 
 export default Productos;
