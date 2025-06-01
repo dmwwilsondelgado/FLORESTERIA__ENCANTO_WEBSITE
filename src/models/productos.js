@@ -41,9 +41,36 @@ class Productos {
     } 
     async updateProducto(id_usuario,nombre_producto,descripcion,precio,stock,categoria_producto) {
         try {
-            const [result] =  await connection.query("")
+            const [result] =  await connection.query("",
+                [id_usuario,nombre_producto,descripcion,precio,stock,categoria_producto]
+            )
+            if (result.affectedRows === 0) {
+                throw new Error(" Producto no encontrado");              
+            }
+            return{
+                id_usuario,
+                nombre_producto,
+                descripcion,
+                precio,
+                stock,
+                categoria_producto
+            }
         } catch (error) {
-            throw error
+            throw error 
+        }
+    }
+    async deleteProducto (id_producto){
+        try {
+            const [result] = await connection.query("DELETE FROM productos WHERE id_profucto = ?",
+            [id_producto]);
+            if (result.affectedRows === 0) {
+                return null;
+            }else{
+                return result.affectedRows>0;
+            }
+        } catch (error) {
+            throw error;
+            
         }
     }
 }
