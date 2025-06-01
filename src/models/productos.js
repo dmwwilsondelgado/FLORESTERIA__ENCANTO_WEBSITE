@@ -10,7 +10,10 @@ class Productos {
     }
     async getProductosbyId(id){
         try {
-            const [rows] = await connection.query("SELECT  * FROM  productos WHERE id_producto = ? ",[id])
+            const [rows] = await connection.query("SELECT  * FROM  productos WHERE id_producto = ? ",[id]);
+            if (rows.affectedRows === 0) {
+                const err  = new Error("Producto No Encontrado")
+            }
         } catch (error) {
             
         }
