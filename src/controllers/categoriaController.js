@@ -21,6 +21,16 @@ class CategoriaController {
             res.status(status).json({ error: error.message });
         }
     }
+    static createCategoria = async (req,res) =>{
+        try {
+            const{nombre_categoria} = req.body;
+            const categorias = new Categorias();
+            const resultado = await categorias.createCategoria(nombre_categoria);
+            res.status(201).json(resultado);
+        } catch (error) {
+            res.status(500).json({error:error.message});
+        }
+    }
 }
 
 
