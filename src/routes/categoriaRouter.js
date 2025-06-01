@@ -3,12 +3,15 @@ import CategoriaController from '../controllers/categoriaController.js'
 const router = express.Router();
 
 
-router.get('/', CategoriaController.getAllProductos);
+router.get('/', CategoriaController.getAllCategorias);
 // Obtener un producto por su ID
-router.get('/:id_categoria_producto', CategoriaController.getPrtoductosById);
+router.get('/:id_categoria_producto', CategoriaController.getCategoriasById);
 // Crear un nuevo producto
-router.post('/', CategoriaController.createProducto);
+router.post('/', CategoriaController.createCategoria);
 // Actualizar un producto completamente (PUT)
-router.put('/:id_categoria_producto', CategoriaController.updateProducto);
+router.put('/:id_categoria_producto', CategoriaController.updateCategorias);
 // Eliminar un producto
-router.delete('/:id_categoria_producto', CategoriaController.deleteProducto);
+router.delete('/:id_categoria_producto', CategoriaController.deleteCategoria);
+
+
+export default router;

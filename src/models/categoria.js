@@ -1,6 +1,4 @@
 import connection from "../utils/db.js";
-
-
 class Categorias {
     /**
    * Metodo para obtener los registros de la base de datos
