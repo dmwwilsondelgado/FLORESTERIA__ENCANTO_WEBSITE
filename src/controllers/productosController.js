@@ -57,7 +57,7 @@ class ProductosController {
       res.status(500).json({ error: error.message });
     }
   }
-  static deleteUsuario = async (req, res) => {
+  static deleteProducto = async (req, res) => {
     try {
       const id = parseInt(req.params.id_usuario,10)
       if (isNaN(id)) {
