@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 :root {
   /* sombras  */
   --black_color: #000000;
@@ -22,49 +23,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  display: grid;
+  display: flex;
   background-color: var(--crema-marfil);
-  grid-template-columns: 1000px 1fr;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
-
-.contenedor {
-  display: flex;
-  margin: 0 auto;
-}
-.contenedor__page {
-  padding: 20px;
-  width: 200%;
-  background-color: var(--black_color);
-  border-radius: 8px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  transform: translateY(50px) scale(0.8) rotate(-10deg);
-  opacity: 0;
-  animation: comboIn 2s forwards;
-}
-.imagen__flowerAmarrilla {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  transform: translateY(50px) scale(0.8) rotate(-10deg);
-  opacity: 0;
-  animation: comboIn 2s forwards;
-}
-
-@keyframes comboIn {
-  to {
-    transform: translateY(0) scale(1) rotate(0deg);
-    opacity: 1;
-  }
+  font-family: "Indie Flower", cursive;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* contenedor login  */
@@ -74,10 +43,10 @@ body {
   border-radius: 12px;
   padding: 2rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
-.login:hover{
+.login:hover {
   transform: scale(1.1);
   transition: 1s;
 }
@@ -90,9 +59,9 @@ body {
 
 .subtitle__text {
   color: var(--dorado-suave);
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
 }
 
