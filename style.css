@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 :root {
   --background-color: #f9f5f0;
@@ -81,6 +82,9 @@ html {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: "Indie Flower", cursive;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .container-logo i {
@@ -90,8 +94,7 @@ html {
 .container-logo h1 a {
   text-decoration: none;
   color: #000;
-  font-size: 3rem;
-  text-transform: uppercase;
+  font-size: 5rem;
   letter-spacing: -1px;
 }
 
