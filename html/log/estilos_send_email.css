@@ -30,7 +30,31 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Indie Flower", cursive;
+  font-weight: 600;
+  font-style: normal;
+  animation: fondoCambiante 30s infinite;
+  animation-timing-function: ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes fondoCambiante {
+  0% {
+    background-image: url(../../img/flores_primavera_1.jpg);
+  }
+  30% {
+    background-image: url(../../img/flores_primavera_1.jpg);
+  }
+  50% {
+    background-image: url(../../img/flores_primavera_6.jpg);
+  }
+  75% {
+    background-image: url(../../img/Free/mujer-decorando-su-casa-con-orquideas.jpg);
+  }
+  100% {
+    background-image: url(../../img/Free/mujer-decorando-su-casa-con-orquideas.jpg);
+  }
 }
 .contenedor {
   display: flex;
