@@ -30,6 +30,10 @@
   width: 100px;
   /* background-color: #000000; */
 }
+.sidebar-contorno {
+  gap: 10px;
+  background-color: var(--rosa-palido);
+}
 .sidebar-item {
   display: flex;
   align-items: end;
