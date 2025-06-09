@@ -1,3 +1,8 @@
+create database floresteria_encanto_database;
+create user 'Wilsondelgado'@'localhost' identified by '1102717619';
+grant all privileges on  floresteria_encanto_database.* to 'Wilsondelgado'@'localhost';
+flush privileges;
+
 use floresteria_encanto_database;
 create table usuarios(
   id_usuario INT AUTO_INCREMENT PRIMARY KEY,-- ID de la categoría (clave primaria)
