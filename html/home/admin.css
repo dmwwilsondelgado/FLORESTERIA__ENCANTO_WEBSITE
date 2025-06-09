@@ -27,11 +27,15 @@
 .sidebar-items {
   display: flex;
   flex-direction: column;
+  width: 100px;
+  /* background-color: #000000; */
 }
 .sidebar-item {
   display: flex;
   align-items: end;
   text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 20px;
 }
 
 body {
