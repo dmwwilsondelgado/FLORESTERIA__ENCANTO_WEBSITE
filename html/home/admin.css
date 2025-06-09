@@ -19,18 +19,15 @@
 }
 
 .sidebar {
+  width: 200px;
   padding: 20px;
-  margin-top: 20px;
-  color: azure;
-  text-decoration: none;
-}
-
-.sidebar-items {
   display: flex;
-  flex-direction: columns;
-  padding: 0 14px;
-  gap: 10px;
-  text-decoration: none;
+  flex-direction: column;
+}
+.sidebar-items {
+}
+.sidebar-item {
+ 
 }
 
 body {
@@ -39,7 +36,7 @@ body {
   grid-template-rows: 160px 1fr;
   grid-template-areas:
     "header header"
-    "sidebar content";
+    "sidebar menu";
   height: 100vh;
 }
 
@@ -47,10 +44,10 @@ header {
   grid-area: header;
 }
 
-.sidebar {
+aside {
   grid-area: sidebar;
 }
 
-.content {
-  grid-area: content;
+.contenido {
+  grid-area: menu;
 }
