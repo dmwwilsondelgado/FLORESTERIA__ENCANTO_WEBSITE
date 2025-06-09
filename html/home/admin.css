@@ -4,5 +4,11 @@
   padding: 20px;
   width: 250px;
   float: left;
-
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
 }
