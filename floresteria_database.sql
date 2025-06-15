@@ -1,5 +1,5 @@
 create database floresteria_encanto_database;
-create user 'Wilsondelgado'@'localhost' identified by '1102717619';
+create user 'wilsondelgado'@'localhost' identified by '1102717619';
 grant all privileges on  floresteria_encanto_database.* to 'Wilsondelgado'@'localhost';
 flush privileges;
 
