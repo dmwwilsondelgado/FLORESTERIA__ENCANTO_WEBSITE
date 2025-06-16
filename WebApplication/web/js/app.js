@@ -4,3 +4,12 @@
  */
 
 
+fetch('http://localhost:8080/WebApplication/api/usuarios')
+  .then(response => response.json())
+  .then(data => {
+    console.log('Usuarios:', data);
+    // aquí puedes pintarlo en una tabla o en HTML
+  })
+  .catch(error => {
+    console.error('Error al obtener usuarios:', error);
+  });
