@@ -15,6 +15,29 @@ app.use("/productos", productosRoutes);
 
 const url = fetch("");
 
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("http://localhost:8080/floresteria_el_encanto/api/usuarios")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error en la respuesta del servidor");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const lista = document.getElementById("usuarios");
+      lista.innerHTML = "";
+      data.forEach((usuario) => {
+        const li = document.createElement("li");
+        li.textContent = `${usuario.nombre} ${usuario.apellido}`;
+        lista.appendChild(li);
+      });
+    })
+    .catch((error) => {
+      console.error("Error al obtener los usuarios:", error);
+    });
+});
+
+
 app.listen(3000, () => {
   console.log(`Servidor corriendo en: http://localhost:3000`);
   console.log("   .--.  ");
@@ -25,10 +48,6 @@ app.listen(3000, () => {
   console.log("/'//_   _/`");
   console.log("\\___)=(___/");
 });
-// enlaze para JAVA
-fetch("http://localhost:8080/floresteria_el_encanto/api/usuarios")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log("Usuarios:", data);
-  })
-  .catch((error) => console.error("Error:", error));
+
+
+
