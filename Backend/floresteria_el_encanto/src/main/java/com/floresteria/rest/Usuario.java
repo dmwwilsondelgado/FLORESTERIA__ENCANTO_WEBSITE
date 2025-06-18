@@ -20,21 +20,45 @@ public class Usuario {
         this.tipo_usuario = tipo_usuario;
     }
 
-    public int getId_usuario() { return id_usuario; }
-    public void setId_usuario(int id_usuario) { this.id_usuario = id_usuario; }
+    public int getId_usuario() {
+        return id_usuario; 
+    }
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
 
-    public String getNombre_usuario() { return nombre_usuario; }
-    public void setNombre_usuario(String nombre_usuario) { this.nombre_usuario = nombre_usuario; }
+    public String getNombre_usuario() {
+        return nombre_usuario; 
+    }
+    public void setNombre_usuario(String nombre_usuario) {
+        this.nombre_usuario = nombre_usuario; 
+    }
 
-    public String getApellido_usuario() { return apellido_usuario; }
-    public void setApellido_usuario(String apellido_usuario) { this.apellido_usuario = apellido_usuario; }
+    public String getApellido_usuario() {
+        return apellido_usuario; 
+    }
+    public void setApellido_usuario(String apellido_usuario) {
+        this.apellido_usuario = apellido_usuario; 
+    }
 
-    public String getCorreo() { return correo; }
-    public void setCorreo(String correo) { this.correo = correo; }
+    public String getCorreo() {
+        return correo; 
+    }
+    public void setCorreo(String correo) {
+        this.correo = correo; 
+    }
 
-    public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
+    public String getPassword() {
+        return password; 
+    }
+    public void setPassword(String password) {
+        this.password = password; 
+    }
 
-    public String getTipo_usuario() { return tipo_usuario; }
-    public void setTipo_usuario(String tipo_usuario) { this.tipo_usuario = tipo_usuario; }
+    public String getTipo_usuario() { 
+        return tipo_usuario; 
+    }
+    public void setTipo_usuario(String tipo_usuario) {
+        this.tipo_usuario = tipo_usuario; 
+    }
 }
