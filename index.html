@@ -559,6 +559,14 @@
       </div>
     </div>
   </footer>
+  <script>
+    fetch('http://localhost:8080/floresteria_el_encanto/api/usuarios')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Usuarios:', data);
+      })
+      .catch(error => console.error('Error:', error));
+  </script>
 </body>
 
 </html>
