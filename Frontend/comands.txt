@@ -17,3 +17,6 @@ npm run dev #iniciar servidor
 
 crud para inevtigar  https://github.com/Geracros13/CRUD-HTML-CSS-JS-
 lo investigue y pues ahy apredi un poco js
+
+
+el codigo me está matando 
