@@ -11,16 +11,19 @@ package CONTROLADOR;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class ConexionDB {
-    public static Connection getConexion() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/floresteria_encanto_database";
-        String user = "wilsondelgado";
-        String pass = "1102717619";
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        return DriverManager.getConnection(url, user, pass);
+    private static final String URL = "jdbc:mysql://localhost:3306/tu_basedatos";
+    private static final String USER = "root";
+    private static final String PASSWORD = "tu_contraseña";
+
+    public static Connection obtenerConexion() throws SQLException {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            return DriverManager.getConnection(URL, USER, PASSWORD);
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("Driver no encontrado", e);
+        }
     }
 }
-
-
-
