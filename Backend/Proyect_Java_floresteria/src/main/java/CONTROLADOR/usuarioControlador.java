@@ -8,6 +8,6 @@ package CONTROLADOR;
  *
  * @author Propietario
  */
-public class ConexionBD {
+public class usuarioControlador {
     
 }
