@@ -561,13 +561,17 @@
     </div>
   </footer>
   <script>
-    fetch('http://localhost:8080/floresteria_el_encanto/api/usuarios')
-      .then(response => response.json())
+    fetch("http://localhost:8080/floresteria-api/api/flores")
+      .then(res => res.json())
       .then(data => {
-        console.log('Usuarios:', data);
+        console.log(data);
+        data.forEach(flor => {
+          document.body.innerHTML += `<p>${flor.nombre} - $${flor.precio}</p>`;
+        });
       })
-      .catch(error => console.error('Error:', error));
+      .catch(error => console.error("Error:", error));
   </script>
+
 </body>
 
 </html>
