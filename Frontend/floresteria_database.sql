@@ -91,4 +91,4 @@ create table comentarios_articulo(
 
 
 
-insert into usuarios(id_usuario,nombre_usuario,apellido_usuario,correo,password,tipo_usuario) values ('1','Wilson','Delgado','wilsondelgadomoreno@gmail.com',1102717619,'usuario'); -- primera insertacion ala base de datos 
+insert into usuarios(id_usuario,nombre_usuario,apellido_usuario,correo,password,tipo_usuario) values ('1','Wilson','Delgado','wilsondelgadomoreno@gmail.com',1102717619,'cliente'); -- primera insertacion ala base de datos 
