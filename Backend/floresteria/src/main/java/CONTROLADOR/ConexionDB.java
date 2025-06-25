@@ -8,6 +8,19 @@ package CONTROLADOR;
  *
  * @author Propietario
  */
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 public class ConexionDB {
-    
+    public static Connection getConexion() throws Exception {
+        String url = "jdbc:mysql://localhost:3306/floresteria_encanto_database";
+        String user = "wilsondelgado";
+        String pass = "1102717619";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        return DriverManager.getConnection(url, user, pass);
+    }
 }
+
+
+
