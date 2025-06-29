@@ -3,7 +3,7 @@ create user 'wilsondelgado'@'localhost' identified by '1102717619';
 grant all privileges on  floresteria_encanto.* to 'wilsondelgado'@'localhost';
 flush privileges;
 
-use floresteria_encanto_database;
+use floresteria_encanto;
 create table usuarios(
   id_usuario INT AUTO_INCREMENT PRIMARY KEY,-- ID de la categoría (clave primaria)
   nombre_usuario VARCHAR(255) NOT NULL,
