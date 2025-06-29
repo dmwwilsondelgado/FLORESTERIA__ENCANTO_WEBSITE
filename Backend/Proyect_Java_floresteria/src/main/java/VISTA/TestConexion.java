@@ -10,14 +10,20 @@ package VISTA;
  * @author Propietario
  */
 import MODELO.Conexion;
-public class ConexionPrueba {
+import java.sql.Connection;
+public class TestConexion {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        Connection con = Conexion.conectar();
+        if (con != null) {
+            System.out.println("¡Está conectado a la base de datos!");
+        } else {
+            System.out.println("Error al conectar.");
+        }
     }
     
 }
